@@ -29,7 +29,7 @@ document.write("<br>Precio más Iva: " + resultado);
 // d. Cuando se haya enviado genera una página nueva indicando que se ha enviado correctamente y
 // muestra la información que se ha enviado.
 
-
+/*
 // 12. Realiza un script que muestre un reloj en pantalla con fecha y hora y que se actualice cada segundo. Función
 // setTimeout().
 
@@ -44,7 +44,7 @@ function mueveReloj(){
   document.form_reloj.reloj.value = horaImprimible
 }
 
-
+*/
 
 /*
 //13. Programa una función que dada una fecha valida determine cuantos años han pasado hasta el día de hoy
@@ -65,4 +65,18 @@ funcion (2000);
 */
 
 // 14. Programa una función que dada una cadena de texto cuente el numero de vocales y consonantes.
+//13. Programa una función que dada una fecha valida determine cuantos años han pasado hasta el día de hoy
+function funcion ( año ) {
+  let tiempo = new Date();
+  let añoActual = tiempo.getFullYear();
+  if ( año < añoActual ) {
+      if ( año > 0 ) {
+          document.write(añoActual - año);
+      }
+  } 
+  else {
+      document.write("Año ingresado invalido");
+  }
+}
+funcion (2000);
 
