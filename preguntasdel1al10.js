@@ -1,4 +1,4 @@
-
+/*
 //1. Realiza un script que pida la edad y si es mayor de 18 años indica que ya puede conducir.
 //PIDE POR TECLADO LA EDAD
 let edad = prompt("INTRODUCE TU EDAD"); 
@@ -12,8 +12,7 @@ else {
   console.log("menor");
 }
 
-
-
+*/
 /*
 // 2. Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un
 // «alert» y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
@@ -246,3 +245,23 @@ var jugados = 0;
     document.write("Partidas perdidas: "+perdidos+"<br>");
     document.write("Partidas empatadas: "+(jugados-ganados-perdidos));
 */
+
+// 10. Crea una función que reciba 2 parámetros, precio e iva, y devuelva el precio con iva incluido. Si no recibe el iva,
+//aplicará el 21 por ciento por defecto.
+
+function masIva(precio, iva){
+    iva = iva || 21
+    var coniva = (precio + precio*iva/100);
+    return coniva;
+  }
+  var precio = Number(prompt("Introduce un precio"));
+  var iva = Number(prompt("Introduce el iva"));
+  if(iva > 0){
+    var resultado = masIva(precio, iva);
+  }
+  else{
+    var resultado = masIva(precio);
+  }
+  document.write("Precio sin iva: " + precio);
+  document.write("<br>Precio más Iva: " + resultado);
+  
